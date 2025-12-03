@@ -1,20 +1,17 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { cssLinks } from "../components/References"
 import ThemeButton from "./ToggleTheme"
+import { useSetCssStore } from "../State"
 
 function MagicButtons(){
-    const [index, setIndex] = useState(0)
+    const nextCss = useSetCssStore((state) => state.nextCss)
+    const prevCss = useSetCssStore((state) => state.prevCss)
+    const currentCss = useSetCssStore((state) => state.currentCss)
 
-    const nextCss = () => {
-        setIndex((prev) => (prev + 1) % cssLinks.length)
-    }
-    const prevCss = () => {
-        setIndex((prev) => (prev - 1 + cssLinks.length) % cssLinks.length)
-    }
     useEffect(() => {
         let linkElem = document.getElementById('dinamic-style') as HTMLLinkElement || null
-        linkElem.href = cssLinks[index]
-    }, [index])
+        linkElem.href = cssLinks[currentCss]
+    }, [currentCss])
 
     return(
         <div className="z-1 fixed bottom-0 right-0 flex justify-between p-2">
