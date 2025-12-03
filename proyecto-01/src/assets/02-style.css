@@ -135,9 +135,6 @@ button {
     font-weight: var(--font-weight-mid);
 
 }
-button:hover {
-    transform: scale(1.07);
-}
 button:active {
     transform: none;
 }

@@ -24,7 +24,7 @@ function ThemeButton(){
 
     return (
         <button onClick={() => setIsDark(!isDark)}>
-            {isDark? "See Light mode" : "See Dark mode"}
+            {isDark? "Switch to Light mode" : "Switch to Dark mode"}
         </button>
     )
 }

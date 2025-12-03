@@ -7,8 +7,9 @@ html, body {
     height: 100%;
 }
 body {
-    font-family: 'Montserrat', 'Arial', sans-serif;
-    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    text-wrap: pretty;
 }
 
 img, picture, video, canvas, svg {
@@ -19,21 +20,34 @@ img, picture, video, canvas, svg {
 /*Dark mode for user's system*/
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-01: #23272f;
-        --color-02: #eff0ef;
-        --color-03: #cecece;
-        --color-04: #16181d;
-        --color-05: #a0ffef;
+        --background-color-primary: #18181B;
+        --background-color-secondary: #0e0e11;
+        --background-color-tertiary: #ffffff;
+
+        --text-color-primary: #ededf1;
+        --text-color-secondary: #c1c2cf;
+        --text-color-tertiary: #000000;
+
+        --pallete-primary: #00c3ff;
+        --pallete-secondary: #b6ecff;
+        --background-pallete: #04354d;
     }
 }
 
 /*Variables*/
 :root {
-    --color-01: #eef0f3;
-    --color-02: #23272f;
-    --color-03: #404756;
-    --color-04: #ffffff;
-    --color-05: #3998b6;
+    /*CAMBIAR PARA LIGHT MODE*/
+    --background-color-primary: #18181B;
+    --background-color-secondary: #0e0e11;
+    --background-color-tertiary: #ffffff;
+
+    --text-color-primary: #ededf1;
+    --text-color-secondary: #c1c2cf;
+    --text-color-tertiary: #000000;
+
+    --pallete-primary: #00c3ff;
+    --pallete-secondary: #b6ecff;
+    --background-pallete: #04354d;
 
     --font-size-1: 2.5rem;
     --font-size-2: 2rem;
@@ -42,47 +56,68 @@ img, picture, video, canvas, svg {
     --font-size-5: 1.25rem;
     --font-size-6: 1rem;
 
-    --font-weight: 700;
+    --font-weight-mx: 900;
+    --font-weight-md: 600;
+    --font-weight-sm: 500;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 }
 
 /*Para modo oscuro*/
 .dark {
-    --color-01: #23272f; 
-    --color-02: #eff0ef;
-    --color-03: #cecece;
-    --color-04: #16181d;
-    --color-05: #a0ffef;
+    --background-color-primary: #18181B;
+    --background-color-secondary: #0e0e11;
+    --background-color-tertiary: #ffffff;
+
+    --text-color-primary: #ededf1;
+    --text-color-secondary: #c1c2cf;
+    --text-color-tertiary: #000000;
+
+    --pallete-primary: #00c3ff;
+    --pallete-secondary: #b6ecff;
+    --background-pallete: #04354d;
+}
+
+html {
+    scrollbar-color: var(--text-color-secondary) var(--background-color-primary);
 }
 
 body {
-    background-color: var(--color-01);
-    color: var(--color-02);
+    background-color: var(--background-color-primary);
+    color: var(--text-color-primary);
 
     /*MEJORAR PROPIEDADES DE TEXTO GENERAL*/
+    text-align: pretty;
+}
+
+hr {
+    margin-block: 1.5rem;
+    border: none;
+    height: 1px;
+    background-color: var(--text-color-secondary);
+    opacity: 0.5;
 }
 
 span {
-    color: var(--color-05);
+    color: var(--pallete-primary);
 }
 
 strong {
-    font-weight: var(--font-weight);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-block: 0.25rem;
+    font-weight: var(--font-weight-sm);
+    color: var(--text-color-primary);
 }
 
 h1 {
     font-size: var(--font-size-1);
+    font-weight: var(--font-weight-mx);
 }
 h2 {
     font-size: var(--font-size-2);
+    font-weight: var(--font-weight-md);
 }
 h3 {
     font-size: var(--font-size-3);
+    font-weight: var(--font-weight-sm);
 }
 h4 {
     font-size: var(--font-size-4);
@@ -98,14 +133,17 @@ p {
     margin-block: 0.75rem;
 
     font-size: var(--font-size-6);
-    color: var(--color-03);
+    color: var(--text-color-secondary);
 }
 
 code {
+    scrollbar-width: none;
+
     margin-block: 0.5rem;
     padding: 0.5rem;
 
-    background-color: var(--color-04);
+    background-color: var(--background-color-secondary);
+    color: var(--pallete-primary);
     font-size: var(--font-size-6);
     border-radius: var(--radius);
 }
@@ -114,7 +152,7 @@ a {
     text-decoration: none;
     max-width: fit-content;
 
-    color: var(--color-05);
+    color: var(--pallete-primary);
 }
 a:hover {
     text-decoration: underline;
@@ -129,42 +167,37 @@ button {
     padding-inline: 1rem;
     cursor: pointer;
 
-    background-color: var(--color-02);
-    color: var(--color-01);
+    background-color: var(--text-color-primary);
+    color: var(--text-color-tertiary);
     border-radius: var(--radius);
-    font-weight: var(--font-weight-mid);
-
-}
-button:hover {
-    transform: scale(1.07);
-}
-button:active {
-    transform: none;
+    font-weight: var(--font-weight-md);
 }
 
-ul{
+ul {
     list-style: disc;
     list-style-position: outside;
-    padding-left: 30px;
 }
 ol {
     list-style: decimal;
     list-style-position: outside;
-    padding-left: 30px;
     margin: 1em 0;
 }
 li {
     margin-inline: 1.25rem;
     font-size: var(--font-size-6);
-    
 }
 li::marker {
-    color: var(--color-05);
+    color: var(--pallete-primary);
 }
 
 form {
     display: flex;
     flex-direction: column;
+}
+textarea {
+    min-height: 5.5rem;
+    max-height: 12rem;
+    height: auto;
 }
 input, textarea {
     margin-inline-end: 0.75rem;
@@ -174,18 +207,41 @@ input, textarea {
     
     border-style: none;
 
-    background-color: var(--color-04);
-    color: var(--color-03);
+    background-color: var(--background-color-secondary);
+    color: var(--text-color-secondary);
     font-size: var(--font-size-6);
     border-radius: var(--radius);
 }
 input:focus {
-    outline: 1px solid var(--color-05);
+    outline: 1px solid var(--pallete-primary);
+}
+input:disabled{
+    opacity: 0.7;
+}
+input:disabled:hover{
+    cursor: not-allowed;
 }
 textarea:focus {
-    outline: 1px solid var(--color-05);
+    outline: 1px solid var(--pallete-primary);
 }
 label {
     margin-left: 0.25rem;
     margin-bottom: 0.25rem;
+
+    font-size: var(--font-size-6);
+}
+
+blockquote {
+    margin-block: 1rem;
+    padding-block: 1rem;
+    margin-inline: 0;
+    padding-inline: 1rem;
+
+    background-color: var(--background-pallete);
+    border-left: 4px solid var(--pallete-secondary);
+    border-radius: 0px var(--radius) var(--radius) 0px;
+    color: var(--pallete-secondary);
+
+    font-size: var(--font-size-6);
+    font-style: italic;
 }
