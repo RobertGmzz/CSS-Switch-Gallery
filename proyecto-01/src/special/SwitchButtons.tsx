@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { cssLinks } from "../components/References"
-import ThemeButton from "./ToggleTheme"
 import { useSetCssStore } from "../State"
+import ThemeButton from "./ToggleTheme"
 
 function MagicButtons(){
     const nextCss = useSetCssStore((state) => state.nextCss)
@@ -9,12 +9,33 @@ function MagicButtons(){
     const currentCss = useSetCssStore((state) => state.currentCss)
 
     useEffect(() => {
-        let linkElem = document.getElementById('dinamic-style') as HTMLLinkElement || null
-        linkElem.href = cssLinks[currentCss]
+        const iframe = document.getElementById("iframeVisor") as HTMLIFrameElement
+        if (!iframe) return
+
+        const updateCss = () => {
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document
+            if (!iframeDoc) return
+
+            const linkFromIframe = iframeDoc.getElementById("demo-style") as HTMLLinkElement
+            if (!linkFromIframe) return
+
+            linkFromIframe.href = cssLinks[currentCss]
+        }
+
+        if (iframe.contentDocument?.readyState === "complete") {
+            updateCss()
+        }
+
+        iframe.addEventListener("load", updateCss)
+
+        return () => iframe.removeEventListener("load", updateCss)
+
     }, [currentCss])
 
+
+
     return(
-        <div className="z-1 fixed bottom-0 right-0 flex justify-between p-2">
+        <div className="flex justify-between">
             <button onClick={prevCss} className="switch-buttons">
                 {"<"}
             </button>

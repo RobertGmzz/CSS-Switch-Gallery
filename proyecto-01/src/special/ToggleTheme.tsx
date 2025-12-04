@@ -12,8 +12,8 @@ function ThemeButton(){
     const [isDark, setIsDark] = useState(getSystemTheme)
 
     useEffect(() => {
-        const html = document.documentElement
-        html.classList.toggle("dark", isDark)
+        const elem = document.getElementById("dinamic-style") as HTMLElement
+        elem.classList.toggle("dark", isDark)
 
         if(isDark){
             localStorage.theme = "dark"

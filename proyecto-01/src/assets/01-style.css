@@ -89,7 +89,7 @@ body {
     /*MEJORAR PROPIEDADES DE TEXTO GENERAL*/
     text-align: pretty;
 }
-
+/*
 hr {
     margin-block: 1.5rem;
     border: none;
@@ -97,7 +97,7 @@ hr {
     background-color: var(--text-color-secondary);
     opacity: 0.5;
 }
-
+*/
 span {
     color: var(--pallete-primary);
 }
@@ -137,8 +137,6 @@ p {
 }
 
 code {
-    scrollbar-width: none;
-
     margin-block: 0.5rem;
     padding: 0.5rem;
 
