@@ -1,30 +1,35 @@
 import { useState, useEffect } from "react"
 
-const getSystemTheme = () => {
-    const saved = localStorage.getItem("theme")
-    if (saved === "dark") return true
-    if (saved === "light") return false
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-}
-
 function ThemeButton(){
-    const [isDark, setIsDark] = useState(getSystemTheme)
+    const [isDark, setIsDark] = useState(false)
 
     useEffect(() => {
-        const elem = document.getElementById("dinamic-style") as HTMLElement
-        elem.classList.toggle("dark", isDark)
+        const iframe = document.getElementById("iframeVisor") as HTMLIFrameElement
+            if (!iframe) return
 
-        if(isDark){
-            localStorage.theme = "dark"
-        } else {
-            localStorage.theme = "light"
+        const setIsDarkInIframe = () => {
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document
+                if (!iframeDoc) return
+
+            const linkFromIframe = iframeDoc.getElementById("theme") as HTMLLinkElement
+                if (!linkFromIframe) return
+
+            linkFromIframe.classList.toggle("dark", isDark)
         }
+
+        if (iframe.contentDocument?.readyState === "complete") {
+            setIsDarkInIframe()
+        }
+        
+        iframe.addEventListener("load", setIsDarkInIframe)
+
+        return () => iframe.removeEventListener("load", setIsDarkInIframe)
+
     }, [isDark])
 
     return (
         <button onClick={() => setIsDark(!isDark)}>
-            {isDark? "Switch to Light mode" : "Switch to Dark mode"}
+            {isDark? "See in Light mode" : "See in Dark mode"}
         </button>
     )
 }

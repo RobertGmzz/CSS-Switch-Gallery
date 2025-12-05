@@ -32,8 +32,6 @@ function MagicButtons(){
 
     }, [currentCss])
 
-
-
     return(
         <div className="flex justify-between">
             <button onClick={prevCss} className="switch-buttons">

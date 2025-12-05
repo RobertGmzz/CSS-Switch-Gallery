@@ -1,5 +1,5 @@
 import Home from "./components/Home"
-//import DemosToShow from "./components/DemosToShow"
+import ShowCurrentLinkElement from "./components/ShowLiks"
 
 import SwitchButtons from "./special/SwitchButtons"
 
@@ -12,6 +12,7 @@ function App() {
       <div className="flex flex-col gap-y-2 pt-2 items-center w-225">
         <SwitchButtons />
         <div className="border">
+          <ShowCurrentLinkElement />
           <iframe id="iframeVisor" className="border m-5 h-[80vh] w-200" src="/src/assets/DemoElements.html"></iframe>
         </div>
       </div>
