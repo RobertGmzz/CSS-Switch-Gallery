@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { cssLinks } from "../components/References"
 import { useSetCssStore } from "../State"
 import ThemeButton from "./ToggleTheme"
+import { ArrowBigLeft, ArrowBigRight } from "lucide-react"
 
 function MagicButtons(){
     const nextCss = useSetCssStore((state) => state.nextCss)
@@ -33,15 +34,13 @@ function MagicButtons(){
     }, [currentCss])
 
     return(
-        <div className="flex justify-between">
-            <button onClick={prevCss} className="switch-buttons">
-                {"<"}
+        <div className="flex justify-between gap-x-5 text-white font-semibold *:border-2 *:border-gray-600 *:rounded-2xl *:px-4 *:py-2">
+            <button onClick={prevCss} className="cursor-pointer bg-gray-800">
+                <ArrowBigLeft />
             </button>
-            <div className="flex flex-col items-center">
                 <ThemeButton />
-            </div>
-            <button onClick={nextCss} className="switch-buttons">
-                {">"}
+            <button onClick={nextCss} className="cursor-pointer bg-gray-800">
+                <ArrowBigRight />
             </button>
         </div>
     )
