@@ -10,9 +10,9 @@ function App() {
 
       <div className="flex flex-col gap-y-5 pt-2 items-center w-200 lg:w-225">
         <SwitchButtons />
-        <div className="flex flex-col gap-y-5 p-5 bg-gray-800 border-2 rounded-4xl border-gray-600">
+        <div className="flex flex-col gap-y-5 p-5 bg-gray-900 border-2 rounded-4xl border-gray-800">
           <ShowCurrentLinkElement />
-          <iframe id="iframeVisor" className="border-2 border-gray-600 rounded-2xl h-[70vh] w-[90vw] lg:w-210" src="/src/assets/DemoElements.html"></iframe>
+          <iframe id="iframeVisor" className="border-2 border-gray-800 rounded-2xl h-[70vh] w-[90vw] lg:w-210 shadow-[0_4px_6px_rgba(0,0,0,0.5)]" src="/src/assets/DemoElements.html"></iframe>
         </div>
       </div>
     </div>
