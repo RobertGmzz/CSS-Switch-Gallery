@@ -34,12 +34,12 @@ function MagicButtons(){
     }, [currentCss])
 
     return(
-        <div className="flex justify-between gap-x-5 text-white font-semibold *:rounded-2xl *:px-4 *:py-2 *:hover:scale-105 *:active:scale-100">
-            <button onClick={prevCss} className="cursor-pointer bg-gray-600">
+        <div className="flex justify-between gap-x-5 *:px-4 *:py-2 font-semibold text-white *:bg-gray-900 *:rounded-2xl *:border-2 *:border-gray-600 *:hover:scale-105 *:active:scale-100 *:cursor-pointer">
+            <button onClick={prevCss}>
                 <ArrowBigLeft />
             </button>
             <ThemeButton />
-            <button onClick={nextCss} className="cursor-pointer bg-gray-600">
+            <button onClick={nextCss}>
                 <ArrowBigRight />
             </button>
         </div>

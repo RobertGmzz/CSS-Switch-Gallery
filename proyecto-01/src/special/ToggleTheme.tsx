@@ -28,7 +28,7 @@ function ThemeButton(){
     }, [isDark])
 
     return (
-        <button onClick={() => setIsDark(!isDark)} className="cursor-pointer bg-gray-600">
+        <button onClick={() => setIsDark(!isDark)}>
             {isDark? "See in Light mode" : "See in Dark mode"}
         </button>
     )
