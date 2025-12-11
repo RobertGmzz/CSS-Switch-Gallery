@@ -1,7 +1,6 @@
-import { cssLinks } from "./components/References"
+import { cssLinks } from "./References"
 import { create } from "zustand"
 
-//store de zustand para crear el estado global del index de la css actual
 interface State {
     currentCss: number
     nextCss: () => void

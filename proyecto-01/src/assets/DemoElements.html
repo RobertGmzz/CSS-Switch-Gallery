@@ -16,13 +16,15 @@
             <code>aca muestro un ejemplo de codigo</code>
         </div>
         <form>
-            <!--ARREGLAR ESTO QUE HAY PROBLEMAS-->
-            <label form htmlFor="email">Email</label>
-            <input type="email" placeholder="somemail@gmail.com"/>
-            <label form htmlFor="textarea">Textarea </label>
-            <textarea name="textarea" id="textarea" placeholder="Type something..."></textarea>
-            <label form htmlFor="disabled">Disabled</label>
-            <input disabled name="disabled" placeholder="You can't write here, sorry"/>
+            <label for="email">Email</label>
+            <input id="email" type="email" autocomplete="email" placeholder="somemail@gmail.com">
+
+            <label for="textarea">Textarea</label>
+            <textarea id="textarea" placeholder="Type something..."></textarea>
+
+            <label for="disabled">Disabled</label>
+            <input id="disabled" disabled placeholder="You can't write here, sorry">
+
         </form>
         <div>
             <ul>

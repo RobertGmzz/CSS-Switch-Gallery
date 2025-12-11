@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 function ThemeButton(){
-    const [isDark, setIsDark] = useState(false)
+    const [isDark, setIsDark] = useState(true)
 
     useEffect(() => {
         const iframe = document.getElementById("iframeVisor") as HTMLIFrameElement
@@ -29,7 +29,7 @@ function ThemeButton(){
 
     return (
         <button onClick={() => setIsDark(!isDark)}>
-            {isDark? "See in Light mode" : "See in Dark mode"}
+            {isDark? "view in light mode" : "view in dark mode"}
         </button>
     )
 }

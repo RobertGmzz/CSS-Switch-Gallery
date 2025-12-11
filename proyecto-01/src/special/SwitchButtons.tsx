@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { cssLinks } from "../components/References"
+import { cssLinks } from "../References"
 import { useSetCssStore } from "../State"
 import ThemeButton from "./ToggleTheme"
 import { ArrowBigLeft, ArrowBigRight } from "lucide-react"
@@ -34,7 +34,7 @@ function MagicButtons(){
     }, [currentCss])
 
     return(
-        <div className="flex justify-between gap-x-5 *:px-4 *:py-2 font-semibold text-white *:bg-gray-900 *:rounded-2xl *:border-2 *:border-gray-600 *:hover:scale-105 *:active:scale-100 *:cursor-pointer">
+        <div className="flex justify-between gap-x-5 *:px-4 *:py-2 text-sm font-semibold text-white *:bg-gray-900 *:rounded-2xl *:border-2 *:border-gray-600 *:hover:scale-105 *:active:scale-100 *:cursor-pointer">
             <button onClick={prevCss}>
                 <ArrowBigLeft />
             </button>
