@@ -8,8 +8,15 @@ html, body {
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.5px;
+
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    /*MEJORAR PROPIEDADES DE TEXTO GENERAL*/
     text-wrap: pretty;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
 }
 
 img, picture, video, canvas, svg {
@@ -85,11 +92,8 @@ html {
 body {
     background-color: var(--background-color-primary);
     color: var(--text-color-primary);
-
-    /*MEJORAR PROPIEDADES DE TEXTO GENERAL*/
-    text-align: pretty;
 }
-/*
+
 hr {
     margin-block: 1.5rem;
     border: none;
@@ -97,7 +101,7 @@ hr {
     background-color: var(--text-color-secondary);
     opacity: 0.5;
 }
-*/
+
 span {
     color: var(--pallete-primary);
 }

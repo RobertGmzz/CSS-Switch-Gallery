@@ -24,7 +24,7 @@ function Hero(){
                 </p>
             </div>
 
-            <a href="https://github.com/RobertGmzz/CSS-Styles-Gallery/tree/master/proyecto-01" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 py-1 px-2 w-auto bg-gray-900 border-2 text-white rounded-2xl border-gray-600 hover:scale-105 active:scale-100">
+            <a href="https://github.com/RobertGmzz/CSS-Styles-Gallery/tree/master/proyecto-01" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 py-1 px-2 w-auto bg-gray-900 border-2 text-white rounded-2xl border-gray-800 hover:scale-105 active:scale-100">
                 <img src="./github.svg" alt="github icon" />
                 <span className="text-sm">Project</span>
             </a>
