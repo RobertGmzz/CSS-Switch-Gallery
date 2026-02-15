@@ -4,10 +4,9 @@ import { useSetCssStore } from "../State"
 function Hero(){
     const currentCss = useSetCssStore((state) => state.currentCss)
         
-
     return (
         <header className="px-5 xl:w-170">
-            <h1 className="text-5xl font-extrabold mb-4 text-white">CSS Styles Gallery</h1>
+            <h1 className="text-5xl font-extrabold mb-4 text-white">CSS Switch Gallery</h1>
             <h2 className="text-2xl font-semibold my-4 text-white">A <strong className="font-semibold">collection of ready-to-use CSS styles</strong> for any project!</h2>
 
             <div className="text-lg text-gray-300 *:mb-3">
