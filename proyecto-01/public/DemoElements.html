@@ -9,39 +9,48 @@
     </head>
     <body id="theme">
         <div>
-            <h3>This is how your HTML elements will look</h3>
+            <h2>This is how your HTML elements will look, check out the demo!</h2>
 
-            <h4>Text Content</h4>
+            <h3>Text Content</h3>
             <div>
                 <p>
-                    This paragraph showcases some <b> inline elements</b> that have been slightly <strong>restyled to better</strong> match the template. <span>Not every element</span> was modified some already look <q>good by default</q>, and others serve purely <a href="#">semantic purposes</a>. Below, <i>you’ll see a few examples</i>.
+                    This paragraph showcases <span>some inline elements</span> that have been slightly <strong>restyled to better</strong> match the template. Not every element was modified some already look <q>good by default</q>, and others serve purely semantic purposes. Below, you’ll see a <i>few examples</i>.
                 </p>
                 <time datetime="2026-02-14">February 14th</time>
                 <p>
-                    The main purpose of this project is to offer developers a <mark>quick solution</mark> to style their pages when they are in a hurry, whether they are practicing another tool and do not want to <s>spend much time working with</s> <code>CSS</code> yet, or they simply want ready-made styles for their portfolio. Please keep in mind that these templates <u>are not intended for large or highly complex professional projects</u>.
+                    The <b>main purpose of this project</b> is to offer developers a <mark>quick solution</mark> to style their pages when they are in a hurry, whether they are practicing another tool and do not want to <s>spend much time</s> working with <code>CSS</code> yet, or they simply want ready-made styles for their portfolio. Please keep in mind that these templates <u>are not intended</u> for large or highly complex professional projects.
                 </p>
+                <p>I use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN elements reference</a>.</p>
             </div>
             
             <div>
-                <h4>Features</h4>
+                <h3>Features</h3>
                 <ul>
                     <li>Direct use, no installation required.</li>
                     <li>You can download the template and modify it if needed.</li>
                     <li>It includes some optional classes for quick use.</li>
                 </ul>
 
-                <h4>How to use</h4>
+                <h3>How to use</h3>
                 <ol>
                     <li>Find the style you like the most using the switch buttons.</li>
-                    <li>Copy the <code>link</code> tag from the top of the preview</li>
+                    <li>Copy the <code>&lt;link&gt;</code> tag from the top of the preview.</li>
                     <li>Paste it into the head section of your HTML.</li>
                 </ol>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum error sapiente consequatur, fuga ea ex officiis obcaecati tempore. Ex error est iste aperiam minima minus laudantium, tenetur dignissimos distinctio quas.
-                </p>
-                <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo tempora eum cum at voluptatum? Quasi corporis dolor.
+
+                <blockquote cite="https://www.huxley.net/bnw/four.html">
+                    <q>Words can be like X-rays, if you use them properly — they'll go through
+                    anything. You read and you're pierced.</q>
+                    <br>
+                    — Aldous Huxley, Brave New World
                 </blockquote>
+
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
                 <dl>
                     <dt>Beast of Bodmin</dt>
                     <dd>A large feline inhabiting Bodmin Moor.</dd>
@@ -53,27 +62,80 @@
                     <dd>A giant owl-like creature.</dd>
                 </dl>
                 <figure>
-                    <img src="https://wallpapercat.com/w/full/2/f/2/938394-3840x2160-desktop-4k-majoras-mask-wallpaper-photo.jpg" alt="Example image">
+                    <img src="https://wallpapercat.com/w/full/2/f/2/938394-3840x2160-desktop-4k-majoras-mask-wallpaper-photo.jpg" alt="Example image" class="img-sm">
                     <figcaption>Example image with caption</figcaption>
                 </figure>
-                
-                <div>
-                    <h1>Heading 1</h1>
-                    <h2>Heading 2</h2>
-                    <h3>Heading 3</h3>
-                    <h4>Heading 4</h4>
-                    <h5>Heading 5</h5>
-                    <h6>Heading 6</h6>
                 </div>
-            </div>
 
-            <hr>
+                <hr>
 
+                <h3>Images & Multimedia</h3>
+                <div class="flex-column justify-center gap">
+                    <h4>Try different image sizes</h4>
+                    <div class="flex-column gap">
+                        <img src="https://wallpapercat.com/w/full/2/f/2/938394-3840x2160-desktop-4k-majoras-mask-wallpaper-photo.jpg" alt="Example image" class="img-sm img-radius">
+                        <img src="https://wallpapercat.com/w/full/2/f/2/938394-3840x2160-desktop-4k-majoras-mask-wallpaper-photo.jpg" alt="Example image" class="img-md img-radius">
+                        <img src="https://wallpapercat.com/w/full/2/f/2/938394-3840x2160-desktop-4k-majoras-mask-wallpaper-photo.jpg" alt="Example image" class="img-lg img-radius">
+                    </div>
+                    
+                    <audio controls></audio>
+                    <video controls></video>
+                </div>
 
-            <hr>
-            
-        </div>
-            
+                <hr>
+
+                <h3>Embedded content</h3>
+                <iframe
+                    id="inlineFrameExample"
+                    title="Inline Frame Example"
+                    width="400"
+                    height="300"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+                </iframe>
+
+                <hr>
+                <h3>Table</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Rank</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Points</th>
+                            <th scope="col">Team</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Domenic</td>
+                            <td>88,110</td>
+                            <td>dcode</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sally</td>
+                            <td>72,400</td>
+                            <td>Students</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Nick</td>
+                            <td>52,300</td>
+                            <td>dcode</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td>None</td>
+                            <td>None</td>
+                            <td>Cold</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam expedita modi quas tenetur voluptate nobis tempora commodi libero qui dicta voluptatem hic corporis blanditiis, perferendis, id odio autem? Voluptatem, veritatis?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam expedita modi quas tenetur voluptate nobis tempora commodi libero qui dicta voluptatem hic corporis blanditiis, perferendis, id odio autem? Voluptatem, veritatis?</p>
         </div>
 </body>
 </html>
