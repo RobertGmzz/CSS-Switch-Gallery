@@ -1,1 +1,94 @@
 @import "tailwindcss";
+
+:root {
+    --font-lg: 2.75rem;
+    --font-md: 1.75rem;
+    --font-sm: 1.25rem;
+
+    --radius-border: 20px;
+
+    --text-color-primary: #c1c2cf;
+    --text-color-secondary: #ededf1;
+
+    --background: #040608;
+
+    --palette-primary: #abe9f6;
+    --palette-secondary: #0a2636;
+}
+
+body {
+    font-family: 'system-ui', sans-serif;
+    text-wrap: pretty;
+    line-height: 1.5;
+
+    font-size: var(--font-sm);
+
+    color: var(--text-color-primary);
+    background-color: var(--background);
+}
+
+h1, h2 {
+    color: var(--text-color-secondary);
+}
+h1 {
+    font-weight: 800;
+    font-size: var(--font-lg);
+}
+h2 {
+    font-size: var(--font-md);
+}
+span {
+    font-weight: 600;
+    color: var(--palette-primary);
+}
+
+code {
+    font-family: monospace;
+
+    border-radius: var(--radius-border);
+    color: var(--palette-primary);
+    background-color: var(--palette-secondary);
+}
+
+a {
+    color: var(--palette-primary);
+}
+.button-like {
+    border-radius: var(--radius-border);
+
+    background-color: var(--palette-secondary);
+}
+
+button {
+    cursor: pointer;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    width: fit-content;
+    
+    border-radius: var(--radius-border);
+
+    color: var(--palette-primary);
+    background-color: var(--palette-secondary);
+}
+
+iframe {
+    border-radius: var(--radius-border);
+}
+
+pre, code {
+    font-size: var(--font-sm);
+}
+pre {
+
+    border-radius: var(--radius-border);
+
+    color: var(--palette-primary);
+    background-color: var(--background);
+}
+
+.preview {
+    border-radius: var(--radius-border);
+    background-color: var(--palette-secondary);
+}

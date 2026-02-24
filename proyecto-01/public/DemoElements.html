@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="theme">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link id="demo-style" rel="stylesheet" href="01-style.css">
-        <!--ACORDATE ELIMINAR LA REFERENCIA-->
-        <title>Document</title>
+        <link id="demo-style" rel="stylesheet" href="01-style.css"><!--ACORDATE ELIMINAR LA REFERENCIA-->
+        <link rel="stylesheet" rel="stylesheet" href="auxiliar.css">
+        <title>CSS Switch Gallery</title>
     </head>
-    <body id="theme">
+    <body>
         <div>
-            <button>Check out the demo!</button>
-            <h2>This is how your elements will look</h2>
-
+            <h2 id="top">This is how your elements will look</h2>
             <h3>Text Content</h3>
             <div>
                 <p>
@@ -21,7 +19,7 @@
                 <p>
                     The <b>main purpose of this project</b> is to offer developers a <mark>quick solution</mark> to style their pages when they are in a hurry, whether they are practicing another tool and do not want to <s>spend much time</s> working with <code>CSS</code> yet, or they simply want ready-made styles for their portfolio. Please keep in mind that these templates <u>are not intended</u> for large or highly complex professional projects.
                 </p>
-                <p>I use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN elements reference</a>.</p>
+                <p>I'm based on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN elements reference</a> for this.</p>
             </div>
             <h3>Ordered & unordered lists</h3>
             <div>
@@ -42,12 +40,21 @@
                 <blockquote>
                         Classes? Yes, there are some optional classes that I included for quick use if needed Throughout the demo, you will see examples in different use cases.
                 </blockquote>
-                <h4>How to use the classes?</h4>
+                <h4>Flex classes</h4>
                 <p>Just add these classes to your containers</p>
-                <pre>
-                    flex-row
-                    flex-column
-                </pre>
+                <div class="flex-row justify-center items-center">
+                    <pre>flex-row</pre>
+                    <pre>nowrap</pre>
+                    <pre>flex-row-reverse</pre>
+                    <pre>flex-column</pre>
+                    <pre>flex-column-reverse</pre>
+                    <pre>justify-center</pre>
+                    <pre>justify-between</pre>
+                    <pre>items-center</pre>
+                    <pre>items-start</pre>
+                    <pre>items-end</pre>
+                    <pre>gap</pre>
+                </div>
 
                 <h1>Heading 1</h1>
                 <h2>Heading 2</h2>
@@ -55,6 +62,8 @@
                 <h4>Heading 4</h4>
                 <h5>Heading 5</h5>
                 <h6>Heading 6</h6>
+                <p>Need some text to be smaller? Use this class.</p>
+                <pre>text-sm</pre>
 
                 <dl>
                     <dt>Beast of Bodmin</dt>
@@ -68,251 +77,331 @@
                 </dl>
                 <h4>Figure</h4>
                 <figure>
-                    <img src="https://wallpapercat.com/w/full/2/f/2/938394-3840x2160-desktop-4k-majoras-mask-wallpaper-photo.jpg" alt="Example image" class="img-sm">
+                    <img src="gral-belgrano.webp" alt="Example image" class="img-sm" loading="lazy">
                     <figcaption>Example image with caption</figcaption>
                 </figure>
+            </div>
+
+            <hr>
+
+            <h3>Images</h3>
+            <div class="flex-column justify-center gap">
+                <h4>Try different image sizes</h4>
+                <div class="flex-column gap">
+                    <img src="gral-belgrano.webp" alt="Example image" class="img-sm img-radius" loading="lazy">
+                    <img src="gral-belgrano.webp" alt="Example image" class="img-md img-radius" loading="lazy">
+                    <img src="gral-belgrano.webp" alt="Example image" class="img-lg img-radius" loading="lazy">
                 </div>
-
-                <hr>
-
-                <h3>Images & Multimedia</h3>
-                <div class="flex-column justify-center gap">
-                    <h4>Try different image sizes</h4>
-                    <div class="flex-column gap">
-                        <img src="https://wallpapercat.com/w/full/2/f/2/938394-3840x2160-desktop-4k-majoras-mask-wallpaper-photo.jpg" alt="Example image" class="img-sm img-radius">
-                        <img src="https://wallpapercat.com/w/full/2/f/2/938394-3840x2160-desktop-4k-majoras-mask-wallpaper-photo.jpg" alt="Example image" class="img-md img-radius">
-                        <img src="https://wallpapercat.com/w/full/2/f/2/938394-3840x2160-desktop-4k-majoras-mask-wallpaper-photo.jpg" alt="Example image" class="img-lg img-radius">
+                <div>
+                    <p>Use these classes to control image sizes</p>
+                    <div class="flex-row">
+                        <pre>img-sm</pre>
+                        <pre>img-md</pre>
+                        <pre>img-lg</pre>
+                        <pre>img-radius</pre>
                     </div>
-                    
-                    <audio controls></audio>
-                    <video controls></video>
                 </div>
-
-                <hr>
-
-                <h3>Embedded content</h3>
-                <iframe
-                    id="inlineFrameExample"
-                    title="Inline Frame Example"
-                    width="400"
-                    height="300"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
-                </iframe>
-
-                <hr>
-                <h3>Table</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col">Rank</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Points</th>
-                            <th scope="col">Team</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Domenic</td>
-                            <td>88,110</td>
-                            <td>dcode</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Sally</td>
-                            <td>72,400</td>
-                            <td>Students</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Nick</td>
-                            <td>52,300</td>
-                            <td>dcode</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Nick</td>
-                            <td>52,300</td>
-                            <td>dcode</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Nick</td>
-                            <td>52,300</td>
-                            <td>dcode</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Total</th>
-                            <td>None</td>
-                            <td>None</td>
-                            <td>Cold</td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col">Rank</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Points</th>
-                            <th scope="col">Team</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Domenic</td>
-                            <td>88,110</td>
-                            <td>dcode</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Sally</td>
-                            <td>72,400</td>
-                            <td>Students</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Nick</td>
-                            <td>52,300</td>
-                            <td>dcode</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Nick</td>
-                            <td>52,300</td>
-                            <td>dcode</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Nick</td>
-                            <td>52,300</td>
-                            <td>dcode</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Total</th>
-                            <td>None</td>
-                            <td>None</td>
-                            <td>Cold</td>
-                        </tr>
-                    </tfoot>
-                </table>
-                
-                <hr>
-                <h3>Forms elements</h3>
-                    <form class="flex-column gap">
-                        <fieldset>
-                            <legend>Typical form</legend>
-                            <div class="flex-column">
-                                <label for="name">Name</label>
-                                <input id="name" type='text' placeholder="full name">
-                            </div>
-                            <div class="flex-column">
-                                <label for="email">Email</label>
-                                <input id="email" type='email' placeholder="your e-mail address">
-                            </div>
-                            <div class="flex-column">
-                                <label for="comentarios">Text area</label>
-                                <textarea id="comentarios" placeholder="your e-mail address"></textarea>
-                            </div>
-                            <input type="submit" value="Submit">
-                            <input type="reset" value="Reset">
-                        </fieldset>
-                        <fieldset>
-                            <legend>Types of inputs</legend>
-                            <div class="flex-column">
-                                <label for="disabled">Disabled</label>
-                                <input id="disabled" type="text" placeholder="you can't write here, sorry" disabled>
-                            </div>
-                            <div class="flex-column">
-                                <label for="password">Password</label>
-                                <input id="password" type="password" placeholder="type something">
-                            </div>
-                            <div class="flex-column">
-                                <label for="date">Date</label>
-                                <input id="date" type='date'>
-                            </div>
-                            <div class="flex-column">
-                                <label for="time">Time</label>
-                                <input id="time" type='time'>
-                            </div>
-                            <div class="flex-column">
-                                <label for="week">Week</label>
-                                <input id="week" type='week'>
-                            </div>
-                            <div class="flex-column">
-                                <label for="color">Color picker</label>
-                                <input id="color" type='color' value="#00c3ff">
-                            </div>
-                            <div class="flex-column">
-                                <label for="file">Select File</label>
-                                <input id="file" type='file' lang="en">
-                            </div>
-                            <div class="flex-column">
-                                <label for="range">Range</label>
-                                <input id="range" type='range' min="0" max="100" value="50">
-                            </div>
-                            <div class="flex-column">
-                                <label for="number">Number</label>
-                                <input id="number" type='number'>
-                            </div>
-                            <div class="flex-column">
-                                <label for="checkbox">Checkbox</label>
-                                <input id="checkbox" type='checkbox'>
-                            </div>
-                            <div class="flex-column">
-                                <label for="radio">Radio</label>
-                                <input id="radio" type='radio' >
-                            </div>
-                        </fieldset>
-                        <fieldset class="flex-column gap">
-                            <legend>More elements</legend>
-                            <div class="flex-column">
-                                <label for="fuel">Meter</label>
-                                <meter id="fuel" min="0" max="100" low="33" high="50" optimum="60" value="60"></meter>
-                            </div>
-                            <div class="flex-column">
-                                <label for="progress">Progress</label>
-                                <progress id="progress" max="100" value="40"></progress>
-                            </div>
-                            <div class="flex-column">
-                                <label for="dino-select">Select</label>
-                                <select id="dino-select">
-                                    <optgroup label="Vanilla">
-                                        <option>HTML</option>
-                                        <option>CSS</option>
-                                        <option>JavaScript</option>
-                                    </optgroup>
-                                    <optgroup label="Frameworks">
-                                        <option>React</option>
-                                        <option>NextJs</option>
-                                        <option>Astro</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                        </fieldset>
-                    </form>
-                <hr>
-                    <h3>Interactive elements</h3>
-                    <details>
-                        <summary>Some details</summary>
-                        <p>More info about the details.</p>
-                        <p>More info about the details.</p>
-                        <p>More info about the details.</p>
-                    </details>
-                    <div class="flex-column">
-                        <button command="show-modal" commandfor="my-dialog">Open dialog</button>
-                        <dialog id="my-dialog">
-                            <p>This dialog was opened using an invoker command.</p>
-                            <button commandfor="my-dialog" command="close">Close</button>
-                        </dialog>
-                    </div>
-                <hr>
+                <h4>Audio & Video</h4>
+                <audio controls></audio>
+                <video controls></video>
+            </div>
+            <hr>
+            <h3>Embedded content</h3>
+            <iframe
+                id="inlineFrameExample"
+                title="Inline Frame Example"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+            </iframe>
+            <hr>
+            <h3>Table</h3>
+            <table>
+                <caption>Example 1</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">Sold</th>
+                        <th scope="col">Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop</td>
+                        <td>800</td>
+                        <td>5</td>
+                        <td>4000</td>
+                    </tr>
+                    <tr>
+                        <td>Keyboard</td>
+                        <td>50</td>
+                        <td>10</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>25</td>
+                        <td>15</td>
+                        <td>375</td>
+                    </tr>
+                    <tr>
+                        <td>Monitor</td>
+                        <td>200</td>
+                        <td>4</td>
+                        <td>800</td>
+                    </tr>
+                    <tr>
+                        <td>Printer</td>
+                        <td>150</td>
+                        <td>3</td>
+                        <td>450</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <td>-</td>
+                        <td>37</td>
+                        <td>6125</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table>
+                <caption>Example 2</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th scope="col">Employee</th>
+                        <th scope="col">Hours</th>
+                        <th scope="col">Pay</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Jhon</td>
+                        <td>40</td>
+                        <td>800</td>
+                        <td>32,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Sarah</td>
+                        <td>35</td>
+                        <td>700</td>
+                        <td>24,500</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>David</td>
+                        <td>45</td>
+                        <td>900</td>
+                        <td>40,500</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Emily</td>
+                        <td>30</td>
+                        <td>600</td>
+                        <td>18,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Michael</td>
+                        <td>38</td>
+                        <td>760</td>
+                        <td>29,080</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3>Forms elements</h3>
+                <form class="flex-column gap">
+                    <fieldset>
+                        <legend>Typical form</legend>
+                        <div class="flex-column">
+                            <label for="name">Name</label>
+                            <input id="name" type='text' placeholder="full name">
+                        </div>
+                        <div class="flex-column">
+                            <label for="email">Email</label>
+                            <input id="email" type='email' placeholder="your e-mail address">
+                        </div>
+                        <div class="flex-column">
+                            <label for="comentarios">Text area</label>
+                            <textarea id="comentarios" placeholder="your e-mail address"></textarea>
+                        </div>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Types of inputs</legend>
+                        <div class="flex-column">
+                            <label for="disabled">Disabled</label>
+                            <input id="disabled" type="text" placeholder="you can't write here, sorry" disabled>
+                        </div>
+                        <div class="flex-column">
+                            <label for="password">Password</label>
+                            <input id="password" type="password" placeholder="type something">
+                        </div>
+                        <div class="flex-column">
+                            <label for="date">Date</label>
+                            <input id="date" type='date'>
+                        </div>
+                        <div class="flex-column">
+                            <label for="time">Time</label>
+                            <input id="time" type='time'>
+                        </div>
+                        <div class="flex-column">
+                            <label for="color">Color picker</label>
+                            <input id="color" type='color' value="#00c3ff">
+                        </div>
+                        <div>
+                            <label for="file">File</label>
+                            <input id="file" type='file'>
+                        </div>
+                        <div class="flex-column">
+                            <label for="range">Range</label>
+                            <input id="range" type='range' min="0" max="100" value="50">
+                        </div>
+                        <div class="flex-column">
+                            <label for="number">Number</label>
+                            <input id="number" type='number' placeholder="select number">
+                        </div>
+                        <div class="flex-column">
+                            <label for="checkbox">Checkbox</label>
+                            <input id="checkbox" type='checkbox'>
+                        </div>
+                        <div class="flex-column">
+                            <label for="radio">Radio</label>
+                            <input id="radio" type='radio' >
+                        </div>
+                    </fieldset>
+                    <fieldset class="flex-column gap">
+                        <legend>More elements</legend>
+                        <div class="flex-column">
+                            <label for="fuel">Meter</label>
+                            <meter id="fuel" min="0" max="100" low="33" high="50" optimum="60" value="60"></meter>
+                        </div>
+                        <div class="flex-column">
+                            <label for="progress">Progress</label>
+                            <progress id="progress" max="100" value="40"></progress>
+                        </div>
+                        <div class="flex-column">
+                            <label for="dino-select">Select</label>
+                            <select id="dino-select">
+                                <optgroup label="Vanilla">
+                                    <option>HTML</option>
+                                    <option>CSS</option>
+                                    <option>JavaScript</option>
+                                </optgroup>
+                                <optgroup label="Frameworks">
+                                    <option>React</option>
+                                    <option>NextJs</option>
+                                    <option>Astro</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </fieldset>
+                </form>
+            <hr>
+            <div class="flex-column gap">
+                <h3>Interactive elements</h3>
+                <h4>Summary</h4>
+                <details>
+                    <summary>Some detail</summary>
+                    <p class="text-sm">My goal is to create at least 10 different styles.</p>
+                </details>
+                <h4>Dialog</h4>
+                <div class="flex-column">
+                    <button class="button-fit" command="show-modal" commandfor="my-dialog">Open modal</button>
+                    <dialog id="my-dialog">
+                        <p>This dialog was opened using an invoker command.</p>
+                        <button class="button-fit" commandfor="my-dialog" command="close">Close</button>
+                    </dialog>
+                </div>
+            </div>
+            <hr>
+            <h3>Button classes</h3>
+            <p>
+                The buttons also have classes for their different uses depending on their importance.
+            </p>
+            <div class="flex-row">
+                <button class="button-primary button-fit">Primary</button>
+                <button class="button-secondary button-fit">Secondary</button>
+                <button class="button-tertiary button-fit">Tertiary</button>
+                <button class="button-fit">Default</button>
+                <button class="button-disabled button-fit">Disabled</button>
+            </div>
+            <h4>Use these classes</h4>
+            <div class="flex-row">
+                <pre>button-primary</pre>
+                <pre>button-secondary</pre>
+                <pre>button-tertiary</pre>
+                <pre>button-disabled</pre>
+                <pre>button-fit</pre>
+            </div>
+            <p class="text-sm">
+                Don’t be misled by the class names, they are only there to differentiate them. None is really more important than the others, so use them in whatever way works best for you.
+            </p>
+            <hr>
+            <h3>Container classes</h3>
+            <p>
+                Finally, there are also classes for containers, using the color palette in case there are specific sections of your page that you want to highlight.
+            </p>
+            <h4>Examples</h4>
+            <div class="flex-column text-sm gap">
+                <article class="container-bg-01 container-radius">
+                    <h3>Generic Title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
+                    </p>
+                    <footer>
+                        <button class="button-primary button-fit">Action</button>
+                        <button class="button-tertiary button-fit">Close</button>
+                    </footer>
+                </article>
+                <article class="container-bg-02 container-radius">
+                    <h3>Generic Title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
+                    </p>
+                    <footer>
+                        <button class="button-fit">Action</button>
+                        <button class="button-tertiary button-fit">Close</button>
+                    </footer>
+                </article>
+                <article class="container-border-01 container-radius">
+                    <h3>Generic Title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
+                    </p>
+                    <footer>
+                        <button class="button-primary button-fit">Action</button>
+                        <button class="button-secondary button-fit">Close</button>
+                    </footer>
+                </article>
+                <article class="container-border-02 container-radius">
+                    <h3>Generic Title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
+                    </p>
+                    <footer>
+                        <button class="button-secondary button-fit">Action</button>
+                        <button class="button-tertiary button-fit">Close</button>
+                    </footer>
+                </article>
+            </div>
+            <h4>Use these classes</h4>
+            <div class="flex-row">
+                <pre>container-bg-01</pre>
+                <pre>container-bg-02</pre>
+                <pre>container-border-01</pre>
+                <pre>container-border-02</pre>
+                <pre>container-radius</pre>
+            </div>
+            <hr>
+            <p class="text-sm">End of the demo, <a href="#top">back to top!</a></p>
         </div>
-</body>
+    </body>
 </html>
