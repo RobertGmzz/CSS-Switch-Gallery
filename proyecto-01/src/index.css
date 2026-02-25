@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
 :root {
-    --font-lg: 2.75rem;
-    --font-md: 1.75rem;
-    --font-sm: 1.25rem;
-
     --radius-border: 20px;
 
     --text-color-primary: #c1c2cf;
-    --text-color-secondary: #ededf1;
+    --text-color-secondary: #ffffff;
 
     --background: #040608;
 
-    --palette-primary: #abe9f6;
-    --palette-secondary: #0a2636;
+    --palette-primary: #c1f5ff;
+    --palette-secondary: #30444d;
+    --palette-tertiary: #ffd6be;
+}
+
+html {
+    scrollbar-color: var(--palette-secondary) var(--background);
 }
 
 body {
-    font-family: 'system-ui', sans-serif;
+    font-family: monospace;
     text-wrap: pretty;
     line-height: 1.5;
 
@@ -27,24 +28,23 @@ body {
     background-color: var(--background);
 }
 
+h1 {
+    font-weight: 600;
+}
 h1, h2 {
+    line-height: 1.2;
     color: var(--text-color-secondary);
 }
-h1 {
-    font-weight: 800;
-    font-size: var(--font-lg);
+
+strong {
+    font-weight: normal;
 }
-h2 {
-    font-size: var(--font-md);
-}
+
 span {
-    font-weight: 600;
     color: var(--palette-primary);
 }
 
 code {
-    font-family: monospace;
-
     border-radius: var(--radius-border);
     color: var(--palette-primary);
     background-color: var(--palette-secondary);
@@ -53,42 +53,81 @@ code {
 a {
     color: var(--palette-primary);
 }
-.button-like {
-    border-radius: var(--radius-border);
-
-    background-color: var(--palette-secondary);
-}
 
 button {
     cursor: pointer;
-
-    font-family: inherit;
-    font-weight: 600;
 
     width: fit-content;
     
     border-radius: var(--radius-border);
 
-    color: var(--palette-primary);
+    color: var(--text-color-secondary);
     background-color: var(--palette-secondary);
 }
 
-iframe {
-    border-radius: var(--radius-border);
-}
-
-pre, code {
-    font-size: var(--font-sm);
-}
 pre {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 
     border-radius: var(--radius-border);
 
-    color: var(--palette-primary);
+    color: var(--palette-tertiary);
     background-color: var(--background);
+}
+
+iframe {
+    height: 70vh;
+    width: 90vw;
+    border-radius: var(--radius-border);
 }
 
 .preview {
     border-radius: var(--radius-border);
     background-color: var(--palette-secondary);
+}
+
+@media(max-width: 500px) {
+    iframe, pre {
+        width: 90vw;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    code {
+        font-size: 0.75rem;
+    }
+}
+
+@media(min-width: 500px) {
+    h1 {
+        font-size: 2.75rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    
+    code {
+        font-size: 1rem;
+    }
+}
+
+@media(min-width: 1280px) {
+    iframe {
+        width: 60vw;
+    }
+
+    pre {
+        margin-inline: 5px;
+    }
 }
