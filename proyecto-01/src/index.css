@@ -53,6 +53,9 @@ code {
 a {
     color: var(--palette-primary);
 }
+a:hover {
+    text-decoration: underline;
+}
 
 button {
     cursor: pointer;

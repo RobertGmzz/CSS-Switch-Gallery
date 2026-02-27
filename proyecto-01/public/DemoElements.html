@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" id="theme">
+<html lang="en" id="theme" class="dark">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link id="demo-style" rel="stylesheet" href="01-style.css"><!--ACORDATE ELIMINAR LA REFERENCIA-->
+        <meta name="description" content="demo elements">
+        <link id="demo-style" rel="stylesheet" href="css/01-style.css"><!--ACORDATE ELIMINAR LA REFERENCIA-->
         <link rel="stylesheet" rel="stylesheet" href="auxiliar.css">
-        <title>CSS Switch Gallery</title>
     </head>
     <body>
         <div>
-            <h2 id="top">This is how your elements will look</h2>
-            <h3>Text Content</h3>
+            <h2 id="top">Así lucirán tus elementos html</h2>
+            <h3>Contenido de texto</h3>
             <div>
                 <p>
-                    This paragraph showcases <span>some inline elements</span> that have been slightly <strong>restyled to better</strong> match the template. Not every element was modified some already look <q>good by default</q>, and others serve purely semantic purposes. Below, you’ll see a <i>few examples</i>.
+                    Este párrafo muestra algunos <span>elementos en línea</span> que modifiqué ligeramente para que combinen con el resto de la plantilla. <strong>No todos los elementos están editados</strong>, algunos <q>lucen bien por defecto</q>, otros cumplen un rol semántico y no cambian la apariencia del texto. <i>Verás mas ejemplos debajo</i>.
                 </p>
-                <time datetime="2026-02-14">February 14th</time>
+                <time datetime="2026-02-14">14 de Febrero</time>
                 <p>
-                    The <b>main purpose of this project</b> is to offer developers a <mark>quick solution</mark> to style their pages when they are in a hurry, whether they are practicing another tool and do not want to <s>spend much time</s> working with <code>CSS</code> yet, or they simply want ready-made styles for their portfolio. Please keep in mind that these templates <u>are not intended</u> for large or highly complex professional projects.
+                    El <b>objetivo principal de CSS Switch Gallery</b> es ofrecer una variedad de etilos predefinidos a los desarrolladores que necesitan una <mark>guía visual rápida de su web</mark>, antes de editar sus propios estilos <code>CSS</code>. O para aquellos que simplemente quieren un diseño rápido para su página estática, por ejemplo un portafolio personal.
+                    Tenga en cuenta que estos estilos <u>no están hechos para un proyecto ya muy avanzado</u>.
                 </p>
-                <p>I'm based on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN elements reference</a> for this.</p>
+                <p>Para la demo, me basé en la <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">referencia de elementos de MDN</a>.</p>
             </div>
-            <h3>Ordered & unordered lists</h3>
+            <h3>Listas, Ordenada y Desordenada</h3>
             <div>
-                <h4>Features</h4>
+                <h4>Características</h4>
                 <ul>
-                    <li>Direct use, no installation required.</li>
-                    <li>You can download the template and modify it if needed.</li>
-                    <li>It includes some optional classes for quick use.</li>
+                    <li>Uso directo, no requiere instalación.</li>
+                    <li>Puedes descargar la plantilla y modificarla si lo necesitas.</li>
+                    <li>Incluye algunas clases opcionales para uso rápido.</li>
                 </ul>
 
-                <h4>How to use</h4>
+                <h4>Como usar</h4>
                 <ol>
-                    <li>Find the style you like the most using the switch buttons.</li>
-                    <li>Copy the <code>&lt;link&gt;</code> tag from the top of the preview.</li>
-                    <li>Paste it into the head section of your HTML.</li>
+                    <li>Cambia los estilos del demo en tiempo real con los botones switch, y encuentra el que mas te guste.</li>
+                    <li>Copia el elemento <code>&lt;link&gt;</code> que se encuentra sobre el visualizador.</li>
+                    <li>Pégalo en el <code>&lt;head&gt;</code>de tu html.</li>
                 </ol>
-
                 <blockquote>
-                        Classes? Yes, there are some optional classes that I included for quick use if needed Throughout the demo, you will see examples in different use cases.
+                    Clases? Si, hay clases opcionales que incluí en las plantillas para utilizar de forma rápida si es preciso, la idea es la misma forma de implementar clases de tailwind. Verás ejemplos y su sintaxis a lo largo del demo.
                 </blockquote>
-                <h4>Flex classes</h4>
-                <p>Just add these classes to your containers</p>
+                <h4>Clases para Display Flex</h4>
+                <p>Agrega estas clases a tus contenedores.</p>
                 <div class="flex-row justify-center items-center">
                     <pre>flex-row</pre>
                     <pre>nowrap</pre>
@@ -56,15 +56,16 @@
                     <pre>gap</pre>
                 </div>
 
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-                <p>Need some text to be smaller? Use this class.</p>
+                <h1>Encabezado 1</h1>
+                <h2>Encabezado 2</h2>
+                <h3>Encabezado 3</h3>
+                <h4>Encabezado 4</h4>
+                <h5>Encabezado 5</h5>
+                <h6>Encabezado 6</h6>
+                <p>Necesitas que algun párrafo tenga la fuente mas pequeña? Usa la clase:</p>
                 <pre>text-sm</pre>
 
+                <h4>Description List (texto robado de mdn)</h4>
                 <dl>
                     <dt>Beast of Bodmin</dt>
                     <dd>A large feline inhabiting Bodmin Moor.</dd>
@@ -75,25 +76,25 @@
                     <dt>Owlman</dt>
                     <dd>A giant owl-like creature.</dd>
                 </dl>
-                <h4>Figure</h4>
+                <h4>Elemento Figure</h4>
                 <figure>
-                    <img src="gral-belgrano.webp" alt="Example image" class="img-sm" loading="lazy">
-                    <figcaption>Example image with caption</figcaption>
+                    <img src="sunset.webp" alt="a sunset" loading="lazy">
+                    <figcaption>Puesta de sol</figcaption>
                 </figure>
             </div>
 
             <hr>
 
-            <h3>Images</h3>
+            <h3>Imágenes</h3>
             <div class="flex-column justify-center gap">
-                <h4>Try different image sizes</h4>
+                <p>Prueba diferentes tamaños para imágenes.</p>
                 <div class="flex-column gap">
-                    <img src="gral-belgrano.webp" alt="Example image" class="img-sm img-radius" loading="lazy">
-                    <img src="gral-belgrano.webp" alt="Example image" class="img-md img-radius" loading="lazy">
-                    <img src="gral-belgrano.webp" alt="Example image" class="img-lg img-radius" loading="lazy">
+                    <img src="gral-belgrano.webp" alt="bridge in a sunset" class="img-sm img-radius" loading="lazy">
+                    <img src="gral-belgrano.webp" alt="bridge in a sunset" class="img-md img-radius" loading="lazy">
+                    <img src="gral-belgrano.webp" alt="bridge in a sunset" class="img-lg img-radius" loading="lazy">
                 </div>
                 <div>
-                    <p>Use these classes to control image sizes</p>
+                    <p>Usando las clases:</p>
                     <div class="flex-row">
                         <pre>img-sm</pre>
                         <pre>img-md</pre>
@@ -101,21 +102,27 @@
                         <pre>img-radius</pre>
                     </div>
                 </div>
-                <h4>Audio & Video</h4>
-                <audio controls></audio>
+                <h4>Audio y Video</h4>
+                <script>
+                    window.addEventListener("DOMContentLoaded", () => {
+                        const audio = document.getElementById("track")
+                        audio.volume = 0.2
+                    })
+                </script>
+                <audio id="track" controls src="audio.mp3"></audio>
                 <video controls></video>
             </div>
             <hr>
-            <h3>Embedded content</h3>
+            <h3>Contenido Incrustado</h3>
             <iframe
                 id="inlineFrameExample"
                 title="Inline Frame Example"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
             </iframe>
             <hr>
-            <h3>Table</h3>
+            <h3>Tablas</h3>
             <table>
-                <caption>Example 1</caption>
+                <caption>Ejemplo de tabla 1</caption>
                 <thead>
                     <tr>
                         <th scope="col">Product</th>
@@ -166,11 +173,11 @@
                 </tfoot>
             </table>
             <table>
-                <caption>Example 2</caption>
+                <caption>Ejemplo de tabla 2</caption>
                 <thead>
                     <tr>
                         <th></th>
-                        <th scope="col">Employee</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Hours</th>
                         <th scope="col">Pay</th>
                         <th scope="col">Total</th>
@@ -218,67 +225,67 @@
             <h3>Forms elements</h3>
                 <form class="flex-column gap">
                     <fieldset>
-                        <legend>Typical form</legend>
+                        <legend>Típico formulario</legend>
                         <div class="flex-column">
-                            <label for="name">Name</label>
-                            <input id="name" type='text' placeholder="full name">
+                            <label for="name">Nombre</label>
+                            <input id="name" type="text" placeholder="full name">
                         </div>
                         <div class="flex-column">
-                            <label for="email">Email</label>
-                            <input id="email" type='email' placeholder="your e-mail address">
+                            <label for="email">Correo electrónico</label>
+                            <input id="email" type="email" placeholder="your e-mail address">
                         </div>
                         <div class="flex-column">
-                            <label for="comentarios">Text area</label>
+                            <label for="comentarios">Mensaje</label>
                             <textarea id="comentarios" placeholder="your e-mail address"></textarea>
                         </div>
-                        <input type="submit" value="Submit">
-                        <input type="reset" value="Reset">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Resetear">
                     </fieldset>
                     <fieldset>
-                        <legend>Types of inputs</legend>
+                        <legend>Tipos de inputs</legend>
                         <div class="flex-column">
-                            <label for="disabled">Disabled</label>
+                            <label for="disabled">Bloqueado</label>
                             <input id="disabled" type="text" placeholder="you can't write here, sorry" disabled>
                         </div>
                         <div class="flex-column">
-                            <label for="password">Password</label>
+                            <label for="password">Contraseña</label>
                             <input id="password" type="password" placeholder="type something">
                         </div>
                         <div class="flex-column">
-                            <label for="date">Date</label>
-                            <input id="date" type='date'>
+                            <label for="date">Calendario</label>
+                            <input id="date" type="date">
                         </div>
                         <div class="flex-column">
-                            <label for="time">Time</label>
-                            <input id="time" type='time'>
+                            <label for="time">Horario</label>
+                            <input id="time" type="time">
                         </div>
                         <div class="flex-column">
-                            <label for="color">Color picker</label>
-                            <input id="color" type='color' value="#00c3ff">
+                            <label for="color">Selección de color</label>
+                            <input id="color" type="color" value="#00c3ff">
                         </div>
                         <div>
-                            <label for="file">File</label>
-                            <input id="file" type='file'>
+                            <label for="file">Subir archivo</label>
+                            <input id="file" type="file">
                         </div>
                         <div class="flex-column">
-                            <label for="range">Range</label>
-                            <input id="range" type='range' min="0" max="100" value="50">
+                            <label for="range">Rango</label>
+                            <input id="range" type="range" min="0" max="100" value="50">
                         </div>
                         <div class="flex-column">
-                            <label for="number">Number</label>
-                            <input id="number" type='number' placeholder="select number">
+                            <label for="number">Número</label>
+                            <input id="number" type="number" placeholder="select number">
                         </div>
                         <div class="flex-column">
-                            <label for="checkbox">Checkbox</label>
-                            <input id="checkbox" type='checkbox'>
+                            <label for="checkbox">Check</label>
+                            <input id="checkbox" type="checkbox">
                         </div>
                         <div class="flex-column">
-                            <label for="radio">Radio</label>
-                            <input id="radio" type='radio' >
+                            <label for="radio">Opción</label>
+                            <input id="radio" type="radio" >
                         </div>
                     </fieldset>
                     <fieldset class="flex-column gap">
-                        <legend>More elements</legend>
+                        <legend>Mas elementos</legend>
                         <div class="flex-column">
                             <label for="fuel">Meter</label>
                             <meter id="fuel" min="0" max="100" low="33" high="50" optimum="60" value="60"></meter>
@@ -288,7 +295,7 @@
                             <progress id="progress" max="100" value="40"></progress>
                         </div>
                         <div class="flex-column">
-                            <label for="dino-select">Select</label>
+                            <label for="dino-select">Seleccionar</label>
                             <select id="dino-select">
                                 <optgroup label="Vanilla">
                                     <option>HTML</option>
@@ -306,34 +313,34 @@
                 </form>
             <hr>
             <div class="flex-column gap">
-                <h3>Interactive elements</h3>
+                <h3>Elementos interactivos</h3>
                 <h4>Summary</h4>
                 <details>
-                    <summary>Some detail</summary>
-                    <p class="text-sm">My goal is to create at least 10 different styles.</p>
+                    <summary>Un detalle</summary>
+                    <p class="text-sm">Mi intención es hacer mínimo 10 estilos diferentes.</p>
                 </details>
                 <h4>Dialog</h4>
                 <div class="flex-column">
-                    <button class="button-fit" command="show-modal" commandfor="my-dialog">Open modal</button>
+                    <button class="button-fit" command="show-modal" commandfor="my-dialog">Abrir modal</button>
                     <dialog id="my-dialog">
-                        <p>This dialog was opened using an invoker command.</p>
-                        <button class="button-fit" commandfor="my-dialog" command="close">Close</button>
+                        <p>Ejemplo de una ventana modal.</p>
+                        <button class="button-fit" commandfor="my-dialog" command="close">Cerrar</button>
                     </dialog>
                 </div>
             </div>
             <hr>
-            <h3>Button classes</h3>
+            <h3>Clases para botones</h3>
             <p>
-                The buttons also have classes for their different uses depending on their importance.
+                En muchas páginas web los botones tienen estilos diferentes dependiendo de la intención y relevancia. Aquí tienes clases para expandir el diseño de tus interfaces de usuario.
             </p>
             <div class="flex-row">
-                <button class="button-primary button-fit">Primary</button>
-                <button class="button-secondary button-fit">Secondary</button>
-                <button class="button-tertiary button-fit">Tertiary</button>
-                <button class="button-fit">Default</button>
-                <button class="button-disabled button-fit">Disabled</button>
+                <button class="button-primary button-fit">Principal</button>
+                <button class="button-secondary button-fit">Secundario</button>
+                <button class="button-tertiary button-fit">Terciario</button>
+                <button class="button-fit">Por defecto</button>
+                <button class="button-disabled button-fit">Bloqueado</button>
             </div>
-            <h4>Use these classes</h4>
+            <p>Utiliza las clases:</p>
             <div class="flex-row">
                 <pre>button-primary</pre>
                 <pre>button-secondary</pre>
@@ -342,12 +349,12 @@
                 <pre>button-fit</pre>
             </div>
             <p class="text-sm">
-                Don’t be misled by the class names, they are only there to differentiate them. None is really more important than the others, so use them in whatever way works best for you.
+                No te dejes llevar por el nombre de las clases, no hay un boton que semanticamente sea mas importante que otro, solo les di ese nombre para diferenciarlos y facilitar su uso. Tú usalos según como creas conveniente.
             </p>
             <hr>
-            <h3>Container classes</h3>
+            <h3>Clases para diferenciar secciones de página</h3>
             <p>
-                Finally, there are also classes for containers, using the color palette in case there are specific sections of your page that you want to highlight.
+                Finalmente, aqui tienes algunas clases para contenedores, es común ver que muchas webs utilizan distintos colores para determinada seccion de la pagina, o algo que necesitan destacar visualmente. Como en el caso de los botones, tu dales el uso que más te convenga.
             </p>
             <h4>Examples</h4>
             <div class="flex-column text-sm gap">
@@ -357,8 +364,8 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
                     </p>
                     <footer>
-                        <button class="button-primary button-fit">Action</button>
-                        <button class="button-tertiary button-fit">Close</button>
+                        <button class="button-primary button-fit">Acción</button>
+                        <button class="button-tertiary button-fit">Cerrar</button>
                     </footer>
                 </article>
                 <article class="container-bg-02 container-radius">
@@ -367,8 +374,8 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
                     </p>
                     <footer>
-                        <button class="button-fit">Action</button>
-                        <button class="button-tertiary button-fit">Close</button>
+                        <button class="button-fit">Acción</button>
+                        <button class="button-tertiary button-fit">Cerrar</button>
                     </footer>
                 </article>
                 <article class="container-border-01 container-radius">
@@ -377,8 +384,8 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
                     </p>
                     <footer>
-                        <button class="button-primary button-fit">Action</button>
-                        <button class="button-secondary button-fit">Close</button>
+                        <button class="button-primary button-fit">Acción</button>
+                        <button class="button-secondary button-fit">Cerrar</button>
                     </footer>
                 </article>
                 <article class="container-border-02 container-radius">
@@ -387,12 +394,12 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
                     </p>
                     <footer>
-                        <button class="button-secondary button-fit">Action</button>
-                        <button class="button-tertiary button-fit">Close</button>
+                        <button class="button-secondary button-fit">Acción</button>
+                        <button class="button-tertiary button-fit">Cerrar</button>
                     </footer>
                 </article>
             </div>
-            <h4>Use these classes</h4>
+            <p>Usa las clases:</p>
             <div class="flex-row">
                 <pre>container-bg-01</pre>
                 <pre>container-bg-02</pre>
@@ -401,7 +408,7 @@
                 <pre>container-radius</pre>
             </div>
             <hr>
-            <p class="text-sm">End of the demo, <a href="#top">back to top!</a></p>
+            <p class="text-sm">Fin del camino, <a href="#top">regresar al principio!</a></p>
         </div>
     </body>
 </html>

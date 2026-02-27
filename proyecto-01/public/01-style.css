@@ -23,22 +23,6 @@ img, picture, video, canvas, svg {
     max-width: 100%;
 }
 
-/*Dark mode for user's system*/
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-color-base: #c1c2cf;
-        --text-color-secondary: #ededf1;
-        --text-color-contrast: #0e0e11;
-
-        --background-color: #0e0e11;
-        --background-color-secondary: #1b1b1b;
-
-        --palette-primary: #b6ecff;
-        --palette-secondary: #00c3ff;
-        --palette-tertiary: #04354d;
-    }
-}
-
 /*VARIABLES*/
 :root {
     --gap: 1rem;
@@ -310,16 +294,12 @@ figure {
     margin: auto;
     padding: 0.5rem;
 
-    max-width: fit-content;
-
     border: 1px solid var(--text-color-base);
     border-radius: var(--radius);
 }
 figcaption {
     font: italic smaller sans-serif;
     text-align: center;
-
-    padding: 3px;
 
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
@@ -356,26 +336,40 @@ hr {
     max-width: 880px;
     max-height: 600px;
 }
+@media (max-width: 460px) {
+    .img-sm {
+        max-width: 110px;
+        max-height: 75px;
+    }
+    .img-md {
+        max-width: 220px;
+        max-height: 150px;
+    }
+    .img-lg {
+        max-width: 440px;
+        max-height: 300px;
+    }
+}
 .img-radius {
     border-radius: var(--radius);
 }
 
-audio, video, iframe {
+audio, video {
+    width: auto;
+
     border-radius: var(--radius);
-}
-audio {
-    width: 300px;
 }
 
 iframe {
+    width: 100%;
+
     border: none;
+    border-radius: var(--radius);
 }
 
 /*TABLE ELEMENTS*/
 table {
-    border-spacing: 1;
-
-    padding: 1rem;
+    padding-block: 1rem;
     width: 100%;
     
     font-size: var(--font-size-6);
@@ -390,6 +384,13 @@ td, th {
     padding-block: 0.5rem;
     
     border-radius: var(--radius);
+}
+
+@media (max-width: 460px) {
+    td, th {
+        padding-inline: 0.5rem;
+        padding-block: 0.25rem;
+    }
 }
 
 th[scope="col"] {
@@ -472,13 +473,15 @@ input[type = "reset"] {
     -webkit-appearance: none;
     appearance: none;
 
+    outline: none;
+
     cursor: pointer;
 
     margin: 0.25rem;
     padding-block: 0.5rem;
     padding-inline: 1rem;
 
-    outline: none;
+    width: fit-content;
 }
 input[type = "submit"] {
     font-weight: var(--font-weight-md);
@@ -507,6 +510,8 @@ input[type = "color"]::-moz-color-swatch {
 
 input[type = "file"] {
     padding: 0.25rem;
+    
+    width: 100%;
 
     border: none;
 }
