@@ -45,7 +45,11 @@ span {
 }
 
 code {
+    padding-block: 2px;
+    padding-inline: 4px;
+
     border-radius: var(--radius-border);
+
     color: var(--palette-primary);
     background-color: var(--palette-secondary);
 }
@@ -61,17 +65,21 @@ button {
     cursor: pointer;
 
     width: fit-content;
-    
+
+    border: 3px solid var(--palette-secondary);
     border-radius: var(--radius-border);
 
     color: var(--text-color-secondary);
+}
+button:hover {
     background-color: var(--palette-secondary);
 }
 
 pre {
     display: block;
     overflow-x: auto;
-    white-space: nowrap;
+    white-space: pre;
+    width: 60vw;
 
     border-radius: var(--radius-border);
 
@@ -91,7 +99,7 @@ iframe {
 }
 
 @media(max-width: 500px) {
-    iframe, pre {
+    iframe {
         width: 90vw;
     }
 
@@ -118,7 +126,6 @@ iframe {
     body {
         font-size: 1.2rem;
     }
-
     
     code {
         font-size: 1rem;
@@ -132,5 +139,11 @@ iframe {
 
     pre {
         margin-inline: 5px;
+    }
+}
+
+@media(max-width: 1280px) {
+    pre {
+        width: 90vw;
     }
 }

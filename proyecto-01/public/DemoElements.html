@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" id="theme" class="dark">
+<html lang="es" id="theme" class="dark">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="demo elements">
-        <link id="demo-style" rel="stylesheet" href="css/01-style.css"><!--ACORDATE ELIMINAR LA REFERENCIA-->
-        <link rel="stylesheet" rel="stylesheet" href="auxiliar.css">
+        <link id="demo-style" rel="stylesheet" href="">
     </head>
     <body>
         <div>
@@ -13,32 +12,36 @@
             <h3>Contenido de texto</h3>
             <div>
                 <p>
-                    Este párrafo muestra algunos <span>elementos en línea</span> que modifiqué ligeramente para que combinen con el resto de la plantilla. <strong>No todos los elementos están editados</strong>, algunos <q>lucen bien por defecto</q>, otros cumplen un rol semántico y no cambian la apariencia del texto. <i>Verás mas ejemplos debajo</i>.
+                    Este párrafo muestra algunos <span>elementos en línea</span> que ajusté ligeramente para que se integren mejor con el resto de la plantilla. <strong>No todos los elementos están modificados</strong>; algunos <q>se ven bien por defecto</q>, otros cumplen una función semántica y <em>no modifican de forma significativa</em> la apariencia del texto. <i>Abajo encontrarás otros ejemplos</i>.
                 </p>
                 <time datetime="2026-02-14">14 de Febrero</time>
                 <p>
-                    El <b>objetivo principal de CSS Switch Gallery</b> es ofrecer una variedad de etilos predefinidos a los desarrolladores que necesitan una <mark>guía visual rápida de su web</mark>, antes de editar sus propios estilos <code>CSS</code>. O para aquellos que simplemente quieren un diseño rápido para su página estática, por ejemplo un portafolio personal.
-                    Tenga en cuenta que estos estilos <u>no están hechos para un proyecto ya muy avanzado</u>.
+                    El <b>objetivo principal de CSS Switch Gallery</b> es ofrecer una variedad de estilos predefinidos a desarrolladores que necesitan una <mark>guía visual rápida para su sitio web</mark> antes de crear o personalizar sus propios estilos <code>CSS</code>. También está pensado para quienes simplemente buscan un diseño rápido para una página estática, como por ejemplo un portafolio, landing, etc.
+                    Ten en cuenta que estos estilos <u>no están pensados para proyectos que ya estén muy avanzados</u>.
                 </p>
                 <p>Para la demo, me basé en la <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">referencia de elementos de MDN</a>.</p>
             </div>
+
+            <hr>
+            
             <h3>Listas, Ordenada y Desordenada</h3>
             <div>
                 <h4>Características</h4>
                 <ul>
-                    <li>Uso directo, no requiere instalación.</li>
-                    <li>Puedes descargar la plantilla y modificarla si lo necesitas.</li>
-                    <li>Incluye algunas clases opcionales para uso rápido.</li>
+                    <li>Se puede usar directamente, sin necesidad de instalación.</li>
+                    <li>Puedes descargar la plantilla y modificarla según lo necesites.</li>
+                    <li>Incluye algunas clases opcionales para facilitar un uso rápido.</li>
                 </ul>
 
                 <h4>Como usar</h4>
                 <ol>
-                    <li>Cambia los estilos del demo en tiempo real con los botones switch, y encuentra el que mas te guste.</li>
+                    <li>Cambia los estilos del demo en tiempo real usando los botones switch y elige el que más te guste.</li>
                     <li>Copia el elemento <code>&lt;link&gt;</code> que se encuentra sobre el visualizador.</li>
-                    <li>Pégalo en el <code>&lt;head&gt;</code>de tu html.</li>
+                    <li>Pégalo dentro del <code>&lt;head&gt;</code> de tu HTML.</li>
                 </ol>
                 <blockquote>
-                    Clases? Si, hay clases opcionales que incluí en las plantillas para utilizar de forma rápida si es preciso, la idea es la misma forma de implementar clases de tailwind. Verás ejemplos y su sintaxis a lo largo del demo.
+                    Aquí tienes el texto mejorado, más claro y con mejor fluidez:
+                    Clases? Sí, incluí clases opcionales en las plantillas para que puedas utilizarlas rápidamente si lo necesitas. La idea es similar a la forma en que se implementan las clases en Tailwind. A lo largo del demo encontrarás ejemplos junto con su sintaxis.
                 </blockquote>
                 <h4>Clases para Display Flex</h4>
                 <p>Agrega estas clases a tus contenedores.</p>
@@ -62,23 +65,23 @@
                 <h4>Encabezado 4</h4>
                 <h5>Encabezado 5</h5>
                 <h6>Encabezado 6</h6>
-                <p>Necesitas que algun párrafo tenga la fuente mas pequeña? Usa la clase:</p>
+                <p>¿Necesitas que algún párrafo tenga una fuente mas pequeña? Usa la clase:</p>
                 <pre>text-sm</pre>
 
-                <h4>Description List (texto robado de mdn)</h4>
+                <h4>Lista Descriptiva</h4>
                 <dl>
                     <dt>Beast of Bodmin</dt>
-                    <dd>A large feline inhabiting Bodmin Moor.</dd>
+                    <dd>Un felino gigante que merodea por Bodmin Moor.</dd>
 
                     <dt>Morgawr</dt>
-                    <dd>A sea serpent.</dd>
+                    <dd>Una criatura marina avistada en la costa.</dd>
 
                     <dt>Owlman</dt>
-                    <dd>A giant owl-like creature.</dd>
+                    <dd>Un ser alado con aspecto de búho.</dd>
                 </dl>
                 <h4>Elemento Figure</h4>
                 <figure>
-                    <img src="sunset.webp" alt="a sunset" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sunset_2007-1.jpg/1280px-Sunset_2007-1.jpg" alt="a sunset" loading="lazy">
                     <figcaption>Puesta de sol</figcaption>
                 </figure>
             </div>
@@ -89,9 +92,9 @@
             <div class="flex-column justify-center gap">
                 <p>Prueba diferentes tamaños para imágenes.</p>
                 <div class="flex-column gap">
-                    <img src="gral-belgrano.webp" alt="bridge in a sunset" class="img-sm img-radius" loading="lazy">
-                    <img src="gral-belgrano.webp" alt="bridge in a sunset" class="img-md img-radius" loading="lazy">
-                    <img src="gral-belgrano.webp" alt="bridge in a sunset" class="img-lg img-radius" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sunset_2007-1.jpg/1280px-Sunset_2007-1.jpg" alt="bridge in a sunset" class="img-sm img-radius" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sunset_2007-1.jpg/1280px-Sunset_2007-1.jpg" alt="bridge in a sunset" class="img-md img-radius" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sunset_2007-1.jpg/1280px-Sunset_2007-1.jpg" alt="bridge in a sunset" class="img-lg img-radius" loading="lazy">
                 </div>
                 <div>
                     <p>Usando las clases:</p>
@@ -228,15 +231,15 @@
                         <legend>Típico formulario</legend>
                         <div class="flex-column">
                             <label for="name">Nombre</label>
-                            <input id="name" type="text" placeholder="full name">
+                            <input id="name" type="text" placeholder="Nombre completo">
                         </div>
                         <div class="flex-column">
                             <label for="email">Correo electrónico</label>
-                            <input id="email" type="email" placeholder="your e-mail address">
+                            <input id="email" type="email" placeholder="nombre@gmail.com">
                         </div>
                         <div class="flex-column">
                             <label for="comentarios">Mensaje</label>
-                            <textarea id="comentarios" placeholder="your e-mail address"></textarea>
+                            <textarea id="comentarios" placeholder="Algún mensaje que quieras dejar"></textarea>
                         </div>
                         <input type="submit" value="Enviar">
                         <input type="reset" value="Resetear">
@@ -245,11 +248,11 @@
                         <legend>Tipos de inputs</legend>
                         <div class="flex-column">
                             <label for="disabled">Bloqueado</label>
-                            <input id="disabled" type="text" placeholder="you can't write here, sorry" disabled>
+                            <input id="disabled" type="text" placeholder="No puedes escribir aquí, lo siento" disabled>
                         </div>
                         <div class="flex-column">
                             <label for="password">Contraseña</label>
-                            <input id="password" type="password" placeholder="type something">
+                            <input id="password" type="password" placeholder="no uses emojis">
                         </div>
                         <div class="flex-column">
                             <label for="date">Calendario</label>
@@ -261,7 +264,7 @@
                         </div>
                         <div class="flex-column">
                             <label for="color">Selección de color</label>
-                            <input id="color" type="color" value="#00c3ff">
+                            <input id="color" type="color" value="#ababab">
                         </div>
                         <div>
                             <label for="file">Subir archivo</label>
@@ -273,7 +276,7 @@
                         </div>
                         <div class="flex-column">
                             <label for="number">Número</label>
-                            <input id="number" type="number" placeholder="select number">
+                            <input id="number" type="number" placeholder="elije un número o escríbelo">
                         </div>
                         <div class="flex-column">
                             <label for="checkbox">Check</label>
@@ -317,7 +320,7 @@
                 <h4>Summary</h4>
                 <details>
                     <summary>Un detalle</summary>
-                    <p class="text-sm">Mi intención es hacer mínimo 10 estilos diferentes.</p>
+                    <p class="text-sm">Mi intención es hacer como mínimo 10 estilos diferentes.</p>
                 </details>
                 <h4>Dialog</h4>
                 <div class="flex-column">
@@ -331,7 +334,7 @@
             <hr>
             <h3>Clases para botones</h3>
             <p>
-                En muchas páginas web los botones tienen estilos diferentes dependiendo de la intención y relevancia. Aquí tienes clases para expandir el diseño de tus interfaces de usuario.
+                En muchas páginas web, los botones tienen estilos distintos según su intención y nivel de importancia. Aquí encontrarás clases para botones que te permitirán ampliar y enriquecer el diseño de tus interfaces de usuario.
             </p>
             <div class="flex-row">
                 <button class="button-primary button-fit">Principal</button>
@@ -349,19 +352,19 @@
                 <pre>button-fit</pre>
             </div>
             <p class="text-sm">
-                No te dejes llevar por el nombre de las clases, no hay un boton que semanticamente sea mas importante que otro, solo les di ese nombre para diferenciarlos y facilitar su uso. Tú usalos según como creas conveniente.
+                No te dejes llevar por el nombre de las clases. Ningún botón es semánticamente más importante que otro; simplemente les di esos nombres para diferenciarlos y facilitar su uso. Utilízalos según lo consideres más conveniente.
             </p>
             <hr>
             <h3>Clases para diferenciar secciones de página</h3>
             <p>
-                Finalmente, aqui tienes algunas clases para contenedores, es común ver que muchas webs utilizan distintos colores para determinada seccion de la pagina, o algo que necesitan destacar visualmente. Como en el caso de los botones, tu dales el uso que más te convenga.
+                Finalmente, aquí tienes algunas clases para contenedores. Es común que muchas páginas web utilicen distintos colores para determinadas secciones de la página o para elementos que necesitan destacar visualmente. Al igual que con los botones, dales el uso que más te convenga.
             </p>
             <h4>Examples</h4>
             <div class="flex-column text-sm gap">
                 <article class="container-bg-01 container-radius">
-                    <h3>Generic Title</h3>
+                    <h3>Los pulpos tienen tres corazones</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
+                        Dos de sus corazones bombean sangre hacia las branquias, mientras que el tercero la distribuye al resto del cuerpo. Curiosamente, cuando nadan, el corazón principal se detiene.
                     </p>
                     <footer>
                         <button class="button-primary button-fit">Acción</button>
@@ -369,9 +372,9 @@
                     </footer>
                 </article>
                 <article class="container-bg-02 container-radius">
-                    <h3>Generic Title</h3>
+                    <h3>La miel no caduca</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
+                        Se han encontrado vasijas de miel en tumbas del antiguo Egipto que, miles de años después, aún eran aptas para el consumo gracias a su baja humedad y acidez natural.
                     </p>
                     <footer>
                         <button class="button-fit">Acción</button>
@@ -379,9 +382,9 @@
                     </footer>
                 </article>
                 <article class="container-border-01 container-radius">
-                    <h3>Generic Title</h3>
+                    <h3>Los tiburones existen antes que los árboles</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
+                        Los primeros tiburones aparecieron hace más de 400 millones de años, mientras que los árboles surgieron millones de años después en la historia de la Tierra.
                     </p>
                     <footer>
                         <button class="button-primary button-fit">Acción</button>
@@ -389,9 +392,9 @@
                     </footer>
                 </article>
                 <article class="container-border-02 container-radius">
-                    <h3>Generic Title</h3>
+                    <h3>El espacio no tiene sonido</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsum totam officiis nisi ab possimus, illum deleniti
+                        El sonido necesita un medio para propagarse, como el aire o el agua. En el vacío del espacio, no hay partículas suficientes para transmitir ondas sonoras.
                     </p>
                     <footer>
                         <button class="button-secondary button-fit">Acción</button>
