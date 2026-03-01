@@ -7,7 +7,7 @@ function Hero(){
     return (
         <header className="px-3 md:pl-5 md:pr-0 xl:w-170">
             <h1 className="mb-2" translate="no">CSS Switch Gallery</h1>
-            <h2 className="mb-5">Una <strong>colección de estilos CSS listos para usar</strong> y que darán vida a tu web!</h2>
+            <h2 className="mb-5">Una <strong>colección de estilos CSS listos para usar!</strong></h2>
 
             <div className="mb-2 *:mb-3">
                 <p>

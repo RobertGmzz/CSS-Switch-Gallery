@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import { SunMedium } from 'lucide-react'
+import { Moon } from 'lucide-react'
 
 function ThemeButton(){
     const [isDark, setIsDark] = useState(true)
@@ -28,8 +30,8 @@ function ThemeButton(){
     }, [isDark])
 
     return (
-        <button onClick={() => setIsDark(!isDark)}>
-            {isDark? "Modo oscuro" : "Modo claro"}
+        <button onClick={() => setIsDark(!isDark)} className="toggle-theme">
+            {isDark? <SunMedium /> : <Moon />}
         </button>
     )
 }

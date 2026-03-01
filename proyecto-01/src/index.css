@@ -74,6 +74,12 @@ button {
 button:hover {
     background-color: var(--palette-secondary);
 }
+.toggle-theme {
+    display: flex;
+    justify-content: center;
+
+    width: 100px;
+}
 
 pre {
     display: block;
