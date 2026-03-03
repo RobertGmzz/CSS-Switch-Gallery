@@ -1,5 +1,5 @@
 # CSS Switch Gallery
-![imagen de la página](switch-gallery.webp)
+![imagen de la página](./public/switch-gallery.webp)
 Una página estática donde puedes ver una colección de estilos CSS listos para usar. Los estilos se muestran en tiempo real mediante un visualizador. Con los botones switch, puedes cambiar entre diferentes estilos CSS prediseñados.
 
 ## Uso:
