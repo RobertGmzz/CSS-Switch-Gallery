@@ -1,25 +1,39 @@
-CSS Switch Gallery
+# CSS Switch Gallery
+![imagen de la página](switch-gallery.webp)
+Una página estática donde puedes ver una colección de estilos CSS listos para usar. Los estilos se muestran en tiempo real mediante un visualizador. Con los botones switch, puedes cambiar entre diferentes estilos CSS prediseñados.
 
-Descripcion:
-Una página estática en donde podras ver una coleccion de estilos css listos para usar. Los estilos se muestran en tiempo real mediante un visualizador. Y haciendo uso de los botones switch podras ver una variedad de estilos css prediseñados. El link element enlazado a cada plantilla se muestra sobre el visualizador, solo necesitas ese link para empezar a usar el estilo que se muestra.
+## Uso:
+Elige el estilo que más te guste utilizando los botones switch del visualizador.
+Una vez que encuentres el que mas te gusta, copia y pega el elemento link dentro del head de tu archivo index.html. Con eso, ya podrás usar el estilo.
+Cada plantilla representa un estilo único e incluye clases prediseñadas. Puedes aplicarlas directamente, de forma similar a como funciona Tailwind CSS, para dar estructura y diseño a tu página rápidamente.
 
-No requiere instalaciones. Pero puedes descargar la plantilla y editarla manualmente a tu manera si es que lo necesitas.
+### Las clases predefinidas permiten:
+- Organizar tu página de manera rápida sin que tengas que escribirlas tu mismo, solo debes aplicar las clases.
+- Diferenciar visualmente elementos y secciones de la interfaz.
+- Cambiar tamaño de imágenes.
 
-Uso: 
-elige el estilo que mas te guste cambiando con los botones switch sobre el visualizador. Cuando encuentres el que te gusta, copia y pega el link element en tu head de tu main.html, con esto ya puedes hacer uso de los estilos.
-Cada plantilla representa un estilo unico. Y todas ellas tienen clases incluidas, con las que (de la misma manera que con la herramienta de desarrollo tailwindcss) podras hacer uso directamente aplicando las clases prediseñadas. Las clases sirven para dar forma a la pagina rapidamente y hay clases para diferenciar visualmente elmentos de la interfaz y tambien para display flex, si se necesita organizar rapidamente el contenido de la pagina. Podras ver el nombre de las clases desplazandote por el visualizador.
+*Puedes ver los nombres de las clases desplazándote por el visualizador.*
 
-Tecnologias utilizadas:
-Vite + React
-Tailwindcss
-Vercel
-Zustand
+## Tecnologías utilizadas:
+- Vite + React (empaquetador, componentes y hooks)
+- Tailwind CSS (estilos reutilizables y optimizados)
+- Vercel (deploy)
+- Zustand (estado global)
+- CSS y HTML (plantillas y demo de elementos)
 
-Contribucion:
-Puedes contribuir enviando tu propia plantilla. 
+## Contribución:
+Si quieres, puedes enviar tu propia plantilla original.
 
-Condiciones: tendras que hacer uso de variables css. Que puedan cambiar segun dark / light mode. Las variables que uso hasta rl momento son: (pegar variables) tambien deberas incluir en tu plantilla estas clases asi como las ves. Preferentemente ordenadas segun como aparecen en el visualizador. Cuando ya la tengas lista haras un pull request en (link de el repositorio de css templates). El nombre de tu plantilla lo decidiras tu mismo. Preferentemente un nombre corto.
+### A tener en cuenta para enviar la plantilla:
+- Por favor, revisa que tu plantilla no se parezca a ninguna que ya exista.
+- La plantilla enviada debe estar preparada para un modo claro y un modo oscuro.
+- Incluir las variables base utilizadas actualmente en las plantillas existentes.
+- Agregar las clases requeridas exactamente como están definidas. Preferentemente, mantener el orden en el que aparecen en el visualizador.
+- Cuando tu plantilla esté lista, envía un pull request al repositorio de plantillas CSS. [templates-css](https://github.com/RobertGmzz/templates-css)
+- El nombre de la plantilla lo eliges tú. Se recomienda que sea corto.
 
-Licencia:
-El código de la galería está bajo GPL v3.
+*También puedes reeditar una plantilla existente, aportando un valor destacable y respetando la idea original*
+
+## Licencia:
+El código de la galería está bajo licencia GPL v3.
 Las plantillas CSS descargables están bajo licencia MIT.
