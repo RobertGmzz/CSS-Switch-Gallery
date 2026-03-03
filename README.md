@@ -1,4 +1,5 @@
 <h1 align="center">CSS Switch Gallery</h1>
+
 ![imagen de la página en cuestión](./public/switch-gallery.PNG)
 Una página estática donde puedes ver una colección de estilos CSS listos para usar. Los estilos se muestran en tiempo real mediante un visualizador. Con los botones switch, puedes cambiar entre diferentes estilos CSS prediseñados.
 
